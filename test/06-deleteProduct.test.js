@@ -26,12 +26,12 @@ describe("06-deleteProduct", () => {
     await importer.import("./StoreManager.sql");
 
     importer.disconnect();
-  });
+  }, 100000);
 
   afterAll(async () => {
     await connection.execute("DROP DATABASE StoreManager");
     await connection.end();
-  });
+  }, 100000);
 
   describe("6 - Crie um endpoint para deletar um produto", () => {
     it("Será validado que é possível deletar um produto com sucesso", async () => {

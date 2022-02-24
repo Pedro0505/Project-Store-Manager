@@ -1,12 +1,12 @@
 const express = require('express');
 const SalesControllers = require('../controllers');
-const MiddlewaresSales = require('../middlewares');
+const SalesMiddlewares = require('../middlewares');
 
 const salesRoute = express.Router();
 
 salesRoute.get('/', SalesControllers.getAllSales);
 salesRoute.get('/:id', SalesControllers.getByIdSales);
-salesRoute.post('/', MiddlewaresSales.SalesMiddleware);
-salesRoute.put('/:id', MiddlewaresSales.SalesMiddleware);
+salesRoute.post('/', SalesMiddlewares.SalesMiddleware, SalesControllers.CreateSale);
+salesRoute.put('/:id', SalesMiddlewares.SalesMiddleware);
 
 module.exports = salesRoute;
