@@ -7,6 +7,6 @@ const salesRoute = express.Router();
 salesRoute.get('/', SalesControllers.getAllSales);
 salesRoute.get('/:id', SalesControllers.getByIdSales);
 salesRoute.post('/', SalesMiddlewares.SalesMiddleware, SalesControllers.CreateSale);
-salesRoute.put('/:id', SalesMiddlewares.SalesMiddleware);
+salesRoute.put('/:id', SalesMiddlewares.SalesMiddleware, SalesControllers.UpdateSale);
 
 module.exports = salesRoute;

@@ -1,6 +1,6 @@
 const ProductsModel = require('../models/ProductsModel');
 
-const UpdatedService = async (id, name, quantity) => {
+const UpdatedProduct = async (id, name, quantity) => {
   const result = await ProductsModel.getProductsByIdModel(id);
 
   const findIndex = result.findIndex((e) => e.id === +id);
@@ -12,4 +12,4 @@ const UpdatedService = async (id, name, quantity) => {
   return { code: 200, data: response };
 };
 
-module.exports = UpdatedService;
+module.exports = UpdatedProduct;

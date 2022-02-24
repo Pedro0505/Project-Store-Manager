@@ -27,12 +27,12 @@ describe("08-updateSales", () => {
     await importer.import("./StoreManager.sql");
 
     importer.disconnect();
-  });
+  }, 100000);
 
   afterAll(async () => {
     await connection.execute("DROP DATABASE StoreManager")
     await connection.end();
-  });
+  }, 100000);
 
   describe("8 - Crie um endpoint para atualizar uma venda", () => {
     it("Será validado que é possível atualizar uma venda com sucesso", async () => {

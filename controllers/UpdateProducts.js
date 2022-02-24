@@ -4,7 +4,7 @@ const UpdateProducts = async (req, res) => {
   const { id } = req.params;
   const { name, quantity } = req.body;
 
-  const { code, data } = await ProductsService.UpdatedService(id, name, quantity);
+  const { code, data } = await ProductsService.UpdatedProduct(id, name, quantity);
 
   if (data.message) return res.status(code).json(data);
 
