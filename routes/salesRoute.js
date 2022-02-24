@@ -4,10 +4,9 @@ const MiddlewaresSales = require('../middlewares');
 
 const salesRoute = express.Router();
 
-salesRoute.use(MiddlewaresSales.SalesMiddleware);
-
 salesRoute.get('/', SalesControllers.getAllSales);
 salesRoute.get('/:id', SalesControllers.getByIdSales);
-salesRoute.post('/');
+salesRoute.post('/', MiddlewaresSales.SalesMiddleware);
+salesRoute.put('/:id', MiddlewaresSales.SalesMiddleware);
 
 module.exports = salesRoute;
