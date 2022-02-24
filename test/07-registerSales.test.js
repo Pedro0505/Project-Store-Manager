@@ -27,12 +27,12 @@ describe("07-registerSales", () => {
     await importer.import("./StoreManager.sql");
 
     importer.disconnect();
-  }, 100000);
+  });
 
   afterAll(async () => {
     await connection.execute("DROP DATABASE StoreManager")
     await connection.end();
-  }, 100000);
+  });
 
   describe("7 - Crie um endpoint para cadastrar vendas", () => {
 

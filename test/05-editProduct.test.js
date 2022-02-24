@@ -26,12 +26,12 @@ describe("05-editProduct", () => {
     await importer.import("./StoreManager.sql");
 
     importer.disconnect();
-  }, 100000);
+  });
 
   afterAll(async () => {
     await connection.execute("DROP DATABASE StoreManager");
     await connection.end();
-  }, 100000);
+  });
 
   describe("5 - Crie um endpoint para atualizar um produto", () => {
     it("Será validado que é possível atualizar um produto com sucesso", async () => {
