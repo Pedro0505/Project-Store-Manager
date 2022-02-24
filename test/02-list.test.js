@@ -26,12 +26,12 @@ describe("02-list", () => {
     await importer.import("./StoreManager.sql");
 
     importer.disconnect();
-  }, 100000);
+  });
 
   afterAll(async () => {
     await connection.execute("DROP DATABASE StoreManager");
     await connection.end();
-  }, 100000);
+  });
 
   describe("2 - Crie endpoints para listar os produtos e as vendas", () => {
     it("Será validado que todos produtos estão sendo retornados", async () => {
