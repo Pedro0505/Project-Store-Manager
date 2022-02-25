@@ -21,7 +21,11 @@ const getSalesByIdModel = async (id) => {
 const createSaleProduct = async ({ productId, quantity, id }) => {
   const QUERRY = `INSERT INTO StoreManager.sales_products 
   (sale_id, product_id, quantity) VALUES (?, ?, ?)`;
-  return connections.execute(QUERRY, [id, productId, quantity]);
+  const [created] = await connections.execute(QUERRY, [id, productId, quantity]);
+
+  return {
+    id: created.insertId,
+  };
 };
 
 const createSale = async () => {
