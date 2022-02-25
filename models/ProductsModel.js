@@ -42,7 +42,9 @@ const deleteProduct = async (id) => {
     [id],
   );
 
-  return deleted;
+  return {
+    affectedRows: deleted.affectedRows,
+  };
 };
 
 module.exports = {
