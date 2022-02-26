@@ -7,6 +7,7 @@ const UpdateProducts = require('./UpdateProducts');
 const DeleteProduct = require('./DeleteProduct');
 const CreateSale = require('./CreateSale');
 const UpdateSale = require('./UpdateSale');
+const DeleteSales = require('./DeleteSales');
 
 module.exports = {
   getAllProducts,
@@ -18,4 +19,5 @@ module.exports = {
   DeleteProduct,
   CreateSale,
   UpdateSale,
+  DeleteSales,
 };
