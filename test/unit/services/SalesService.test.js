@@ -44,7 +44,7 @@
 //       });
 
 //       it('Teste com um id valido', async () => {
-//         const response = await SalesService.SalesNotExist(1);
+//         const response = await SalesService.SearchsSalesId(1);
 
 //         expect(response).to.be.deep.equal(responseGet);
 //       });
@@ -62,7 +62,7 @@
 //       });
 
 //       it('Teste com um id invalido', async () => {
-//         const response = await SalesService.SalesNotExist(1020304);
+//         const response = await SalesService.SearchsSalesId(1020304);
 
 //         expect(response).to.be.deep.equal(unsuccessfulGet);
 //       });

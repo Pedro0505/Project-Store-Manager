@@ -2,7 +2,7 @@ const ProductsService = require('../services');
 
 const getByIdSales = async (req, res) => {
   const { id } = req.params;
-  const { code, data } = await ProductsService.SalesNotExist(id);
+  const { code, data } = await ProductsService.SearchsSalesId(id);
 
   if (data.message) return res.status(code).json(data);
 

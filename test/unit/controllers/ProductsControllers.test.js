@@ -72,11 +72,11 @@ describe('Testando a camada de controller dos produtos', () => {
         response.status = sinon.stub().returns(response);
         response.json = sinon.stub().returns();
   
-        sinon.stub(ProductsService, 'ProductNotExist').resolves(mockService)
+        sinon.stub(ProductsService, 'SearchsProductsId').resolves(mockService)
       });
   
       after(() => {
-        ProductsService.ProductNotExist.restore();
+        ProductsService.SearchsProductsId.restore();
       });
   
       it('Testando se o code está certo e o resultado', async () => {
@@ -100,11 +100,11 @@ describe('Testando a camada de controller dos produtos', () => {
         response.status = sinon.stub().returns(response);
         response.json = sinon.stub().returns();
 
-        sinon.stub(ProductsService, 'ProductNotExist').resolves( { code: 404, data: { message: 'Product not found' } })
+        sinon.stub(ProductsService, 'SearchsProductsId').resolves( { code: 404, data: { message: 'Product not found' } })
       });
   
       after(() => {
-        ProductsService.ProductNotExist.restore();
+        ProductsService.SearchsProductsId.restore();
       });
   
       it('Testando o code e o resultado', async () => {

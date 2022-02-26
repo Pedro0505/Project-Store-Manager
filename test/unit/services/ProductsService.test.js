@@ -101,7 +101,7 @@ describe('Testando a camada de ProductsService', () => {
     });
 
     it('Testando a busca de um produto pro id', async () => {
-      const response = await ProductsService.ProductNotExist(1);
+      const response = await ProductsService.SearchsProductsId(1);
 
       expect(response).to.be.deep.equal(getSucess);
     });
@@ -142,7 +142,7 @@ describe('Testando a camada de ProductsService', () => {
     });
 
     it('Testando a busca de um produto pro id ineixtente', async () => {
-      const idResponse = await ProductsService.ProductNotExist(99999);
+      const idResponse = await ProductsService.SearchsProductsId(99999);
 
       expect(idResponse).to.be.deep.equal(getIdUnsuccessful);
     });

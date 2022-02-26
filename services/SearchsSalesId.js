@@ -1,6 +1,6 @@
 const SalesModel = require('../models/SalesModel');
 
-const SalesNotExist = async (id) => {
+const SearchsSalesId = async (id) => {
   const result = await SalesModel.getSalesByIdModel(id);
 
   const newResult = result.map((e) => ({
@@ -14,4 +14,4 @@ const SalesNotExist = async (id) => {
   return { code: 200, data: newResult };
 };
 
-module.exports = SalesNotExist;
+module.exports = SearchsSalesId;

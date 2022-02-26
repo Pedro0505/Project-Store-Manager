@@ -56,7 +56,7 @@ const updateSale = async (id, productId, quantity) => {
 };
 
 const DeleteSale = async (id) => {
-  const QUERRY = 'DELETE FROM StoreManager.sales_products WHERE sale_id = 1;';
+  const QUERRY = 'DELETE FROM StoreManager.sales_products WHERE sale_id = ?;';
 
   await connections.execute(QUERRY, [id]);
 };

@@ -1,6 +1,6 @@
 const ProductsModel = require('../models/ProductsModel');
 
-const ProductNotExist = async (id) => {
+const SearchsProductsId = async (id) => {
   const result = await ProductsModel.getProductsByIdModel(id);
 
   const findIndex = result.findIndex((e) => e.id === +id);
@@ -10,4 +10,4 @@ const ProductNotExist = async (id) => {
   return { code: 200, data: result[findIndex] };
 };
 
-module.exports = ProductNotExist;
+module.exports = SearchsProductsId;

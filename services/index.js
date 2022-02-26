@@ -1,5 +1,5 @@
-const ProductNotExist = require('./ProductNotExist');
-const SalesNotExist = require('./SalesNotExist');
+const SearchsProductsId = require('./SearchsProductsId');
+const SearchsSalesId = require('./SearchsSalesId');
 const CreateProducts = require('./CreateProducts');
 const UpdatedProduct = require('./UpdatedProduct');
 const DeleteProduct = require('./DeleteProduct');
@@ -7,8 +7,8 @@ const UpdateSale = require('./UpdateSale');
 const DeleteSale = require('./DeleteSale');
 
 module.exports = {
-  ProductNotExist,
-  SalesNotExist,
+  SearchsProductsId,
+  SearchsSalesId,
   CreateProducts,
   UpdatedProduct,
   DeleteProduct,
