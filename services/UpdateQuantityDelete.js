@@ -13,7 +13,7 @@ const UpdateQuantityDelete = async (id) => {
     const value = find.quantity + quantity;
   
     arr.push({ id: productId, quantity: value });
-  }, {});
+  });
 
   await Promise.all(arr.map(async (e) => {
     await SalesModel.UpdateQuantity(e.quantity, e.id);
