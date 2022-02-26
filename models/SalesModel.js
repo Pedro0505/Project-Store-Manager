@@ -61,6 +61,12 @@ const DeleteSale = async (id) => {
   await connections.execute(QUERRY, [id]);
 };
 
+const UpdateQuantity = async (quantity, id) => {
+  const QUERRY = 'UPDATE StoreManager.products SET quantity = ? WHERE id = ?;';
+
+  await connections.execute(QUERRY, [quantity, id]);
+};
+
 module.exports = {
   getAllSalesModel,
   getSalesByIdModel,
@@ -68,4 +74,5 @@ module.exports = {
   createSaleProduct,
   updateSale,
   DeleteSale,
+  UpdateQuantity,
 };

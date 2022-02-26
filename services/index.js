@@ -5,6 +5,8 @@ const UpdatedProduct = require('./UpdatedProduct');
 const DeleteProduct = require('./DeleteProduct');
 const UpdateSale = require('./UpdateSale');
 const DeleteSale = require('./DeleteSale');
+const UpdateQuantityDelete = require('./UpdateQuantityDelete');
+const UpdateQuantityPost = require('./UpdateQuantityPost');
 
 module.exports = {
   SearchsProductsId,
@@ -14,4 +16,6 @@ module.exports = {
   DeleteProduct,
   UpdateSale,
   DeleteSale,
+  UpdateQuantityDelete,
+  UpdateQuantityPost,
 };
