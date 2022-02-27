@@ -9,8 +9,6 @@ const ValidateQuantity = async (req, res, next) => {
     return find.quantity - quantity;
   });
 
-  console.log(valueQuantity);
-
   if (valueQuantity < 0) {
     return res.status(422).json({ message: 'Such amount is not permitted to sell' });
   }
